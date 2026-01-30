@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- 🔹 إضافة خفيفة جدًا -->
+  <style>
+    #m-splash {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff7a00;
+      font-size: 96px;
+      font-weight: bold;
+      font-family: Oxanium, sans-serif;
+      z-index: 999999;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔹 حرف M فقط -->
+  <div id="m-splash">M</div>
+
+  <!-- الأصل (لا نلمسه) -->
+  <div id="root"></div>
+
+  <!-- 🔹 سكربت بسيط وآمن -->
+  <script>
+    setTimeout(function () {
+      var m = document.getElementById("m-splash");
+      if (m) m.remove();
+    }, 1500);
+  </script>
+
+  <!-- الأصل (مهم جدًا) -->
+  <script type="module" src="/src/main.tsx"></script>
+
+</body>
+</html>
